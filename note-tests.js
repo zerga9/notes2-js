@@ -14,3 +14,15 @@
     assert.isTrue(list.notes[1] === "I love Ruby too", "stores second note")
   }
  testStoreNoteList();
+
+ function testShowList() {
+   var list  =  new NoteList();
+   list.storeNote(new Note("Favorite food: pesto").text);
+   list.storeNote(new Note("Favorite drink: selzer").text);
+   console.log(list.notes)
+   var view = new NoteListView(list)
+   console.log(view.show())
+   assert.isTrue(view.show() === "<ul><li><div>Favorite food: pesto</div></li><li><div>Favorite drink: selzer</div></li></ul>", "returns string of HTML ")
+ }
+
+ testShowList();
