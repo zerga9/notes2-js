@@ -8,9 +8,9 @@
 
   function testStoreNoteList() {
     var list = new NoteList();
-    list.createNote(new Note("My favorite language is JavaScript"));
-    list.createNote(new Note("I love Ruby too"));
-    assert.isTrue(list.notes[0].text === "My favorite language is JavaScript", "stores first note")
-    assert.isTrue(list.notes[1].text === "I love Ruby too", "stores second note")
+    list.storeNote(new Note("My favorite language is JavaScript").text);
+    list.storeNote(new Note("I love Ruby too").text);
+    assert.isTrue(list.notes[0] === "My favorite language is JavaScript", "stores first note")
+    assert.isTrue(list.notes[1] === "I love Ruby too", "stores second note")
   }
  testStoreNoteList();

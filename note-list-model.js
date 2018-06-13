@@ -3,8 +3,8 @@
     this.notes = []
   };
 
-  NoteList.prototype.createNote = function (note) {
-    this.notes.push(note)
+  NoteList.prototype.storeNote = function (string) {
+    this.notes.push(string)
   }
   exports.NoteList = NoteList;
 })(this);
