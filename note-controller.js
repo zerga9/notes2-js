@@ -1,4 +1,3 @@
-// document.getElementById('app').innerHTML = "Howdy World";
 (function (exports){
   function NoteController(list){
     this.list = list

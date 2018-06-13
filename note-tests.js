@@ -24,3 +24,10 @@
  }
 
  testShowList();
+
+ function testSingleNoteView(){
+ var singleNoteView = new SingleNoteView(new Note("Favorite drink: selzer"))
+ assert.isTrue(singleNoteView.display() === "<div>Favorite drink: selzer</div>", "single note view passing")
+}
+
+testSingleNoteView();
