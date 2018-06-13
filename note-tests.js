@@ -31,3 +31,13 @@ function testAbbreviationNote(){
   assert.isTrue(view.show() === "<ul><li><div>Favorite food: pesto</div></li><li><div>Favorite drink: selz</div></li></ul>" )
 }
 testAbbreviationNote();
+
+function testgetNoteById(){
+  var list = new NoteList();
+  list.storeNote(new Note("Favorite food: pesto").text);
+  list.storeNote(new Note("Favorite drink: selzer").text);
+  assert.isTrue(list.getNoteById("Favorite food: pesto") === 0, "first note has id of 0")
+  assert.isTrue(list.getNoteById("Favorite drink: selzer") === 1, "second note has id of 1")
+
+}
+testgetNoteById();
