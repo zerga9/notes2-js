@@ -16,7 +16,7 @@
  testStoreNoteList();
 
  function testSingleNoteView(){
- var singleNoteView = new SingleNoteView(new Note(0, "Favorite drink: selzer"))
+ var singleNoteView = new SingleNoteView("Favorite drink: selzer")
  assert.isTrue(singleNoteView.display() === "<div>Favorite drink: selzer</div>", "single note view passing")
 }
 
