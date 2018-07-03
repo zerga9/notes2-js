@@ -1,15 +1,12 @@
 (function (exports){
   function NoteController(){
     this.list = new NoteList();
-    this.list.storeNote("Favorite drink: selzer")
-    this.list.storeNote("Gadiza is the best")
-    this.list.storeNote("First note-app!!!")
     this.view = new NoteListView(this.list)
+    // this.list.storeNote("Favorite drink: selzer")
   };
 
   NoteController.prototype.getHtml = function () {
     document.getElementById('note').innerHTML = this.view.show();
-  
   }
 
 

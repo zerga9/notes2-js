@@ -1,8 +1,14 @@
 function NoteControllerTest() {
-  var controller = new NoteController(new NoteList);
-  controller.getHtml();
+  var controller = new NoteController();
+  var list = new NoteList();
+  list.storeNote("testing controller")
+  var double = { innerHTML: null }
+  double.innerHTML = new NoteListView(list).show()
+  console.log(double.innerHTML);
+
+  console.log(controller.getHtml())
   console.log(document.getElementById('note').innerHTML)
-  assert.isTrue(document.getElementById('note').innerHTML === `<ul><li><div><a href="#notes/0">Favorite drink: selz</a></div></li><li><div><a href="#notes/1">Gadiza is the best</a></div></li><li><div><a href="#notes/2">First note-app!!!</a></div></li></ul>`, "notecontroller tested ")
+  assert.isTrue(double.innerHTML === `<ul><li><div><a href='#notes/0'>testing controller</a></div></li></ul`, "Notecontroller tested ")
 };
 
 NoteControllerTest();
