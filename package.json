@@ -4,11 +4,24 @@
   "description": "notes app2",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "me",
   "license": "ISC",
   "devDependencies": {
     "http-server": "^0.11.1"
-  }
+  },
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zerga9/notes2-js.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/zerga9/notes2-js/issues"
+  },
+  "homepage": "https://github.com/zerga9/notes2-js#readme"
 }

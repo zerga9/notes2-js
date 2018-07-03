@@ -2,7 +2,6 @@
   function NoteController(){
     this.list = new NoteList();
     this.view = new NoteListView(this.list)
-    // this.list.storeNote("Favorite drink: selzer")
   };
 
   NoteController.prototype.getHtml = function () {
