@@ -15,10 +15,15 @@
 <script src='note-tests.js'></script>
 <script src='initialize.js'></script>
 <br>
-<form id='text' action='/#notes' method='post'>
-  Add Note:<br>
-<textarea name="addnote" form="form"></textarea>
-<input type="submit" value="Submit">
+<label for="addnote">Add Note:</label>
+    <br/>
+    <textarea id="addnote" name="addnote" form="submit">
+    </textarea>
+
+    <br/>
+    <form id="submit" action="/" method="post">
+    <input type="submit" value="Submit">
+    </form>
 
 </form>
 
