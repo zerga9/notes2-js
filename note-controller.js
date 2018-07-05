@@ -1,3 +1,5 @@
+
+
 (function (exports){
   function NoteController(){
     this.list = new NoteList();
